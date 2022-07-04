@@ -1,0 +1,18 @@
+---
+title: "The Progression Of Agent Pick Rates in Valorant"
+description: |
+  Valorant is a free-to-play online FPS game, involving two teams of 5 players each and various agents with unique abilities. Since the game's inception 2 years ago, new agents have been introduced that have influenced individual playstyles and subequent pick rates. For my final project, I will be analyzing the progression of agent pick rates in Valorant over the episodes (seasons of the game) in order to identify which agents are most favoured.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
