@@ -1,10 +1,29 @@
 ---
-title: "About this site"
+title: "About This Site"
 description: |
-  Some additional details about the website
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## About Me
+My name is **Nathan Nambiar** and I'm a Bachelor of Health Sciences student at Queen's University. My interests include cooking, reading, playing Valorant, and binge-watching Netflix. This is my first experience with coding and dabbling in data sciences. 
+
+## About the Project
+*The Importance of Understanding Agent Pick Rates*
+
+For my final project, I will be analyzing the progression of agent pick rates in Valorant over the episodes (seasons of the game) in order to identify which agents are the most favored. Understanding this can give insight into the diverse "play styles" used in competitive gameplay, as well as the community's outlook on the updates from Riot Games. 
+
+# Goals
+
+* Create a bar graph of the agent-specific pick rates
+  + Use 'gganimate' to create a time-based visualization
+* Determine the most favored and least favored agents of each class
+  + The four classes of agents: duelist, initiator, sentinel, and controller
+  
+"This is Data Science"
+  ~ Preceptor
+  
+  [Kane's Free High School Data Science Bootcamp](https://bootcamp.davidkane.info/)

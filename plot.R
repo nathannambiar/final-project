@@ -1,15 +1,3 @@
----
-title: "The Progression Of Agent Pick Rates in Valorant"
-description: |
-  Valorant is a free-to-play online FPS game, involving two teams of 5 players each and various agents with unique abilities. Since the game's inception 2 years ago, new agents have been introduced that have influenced individual playstyles and subequent pick rates. 
-  
-    
-site: distill::distill_website
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
 library(tidyverse)
 library(ggthemes)
 library(readxl)
@@ -21,21 +9,14 @@ library(gganimate)
 library(lubridate)
 library(gifski)
 library(ggimage)
-library(knitr)
-library(usethis)
-library(distill)
-library(plotly)
 
-```
-
-```{r valorant-plot, warning=TRUE}
 #Data 
 data<-read_excel("agent_pickrates.xlsx",sheet="Sheet1") 
-  
+
 
 
 #Code for Bar Plot
-plot<- data |> 
+plot<-data |> 
   ggplot(mapping=aes(x=Agent,y=Pick_Rate,color=Agent,fill=Agent))+ 
   geom_col()+  
   theme_clean()+
@@ -44,7 +25,7 @@ plot<- data |>
         plot.title = element_text(face="bold",size=20))+
   scale_y_continuous(labels = scales::percent)+
   scale_x_discrete(guide = guide_axis(n.dodge=2))+
-   labs(title="Pick Rates of Valorant Agents by Season",
+  labs(title="Pick Rates of Valorant Agents by Season",
        subtitle="Episode: {frame_time}",
        y="Pick Rate (%)",
        caption="Source: blitz.gg")
@@ -52,12 +33,9 @@ plot<- data |>
 
 #Transition for Bar Plot
 final_plot<- plot + transition_time(Date)
- 
-animate(final_plot, 
+
+val_plot<-animate(final_plot, 
         duration = 30,
         fps  =  10)
-```
 
-
-
-
+save_gif(val_plot)

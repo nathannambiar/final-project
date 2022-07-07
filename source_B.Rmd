@@ -1,0 +1,17 @@
+---
+title: "Untitled"
+description: |
+  Detailed notes for Source B
+author:
+  - name: Nathan Nambiar 
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+
