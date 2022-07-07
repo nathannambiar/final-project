@@ -51,7 +51,7 @@ plot<- data |>
         plot.title = element_text(face="bold",size=20))+
   scale_y_continuous(labels = scales::percent)+
   scale_x_discrete(guide = guide_axis(n.dodge=2))+
-   labs(title="Pick Rates of Valorant Agents By Season",
+   labs(title="Pick Rates of Valorant Agents By Class",
        subtitle="Season Release Date: {closest_state} ",
        y="Pick Rate (%)",
        caption="Source: blitz.gg") 
