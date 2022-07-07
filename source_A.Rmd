@@ -1,7 +1,7 @@
 ---
 title: "Source A: Blitz.GG"
 description: |
-  The first source for this project is [**Blitz.GG**](https://blitz.gg/valorant/stats/agents?map=all&act=e3act2&queue=competitive&tier=17), a third-party website that offers statistics and match history for Valoramt players.This source was used to find the statistics on pick rates by agent for each season of Valorant. An image of what the platform looks like has been included below.
+  The first source for this project is [**Blitz.GG**](https://blitz.gg/valorant/stats/agents?map=all&act=e3act2&queue=competitive&tier=17), a third-party website that offers statistics and match history for Valorant players.This source was used to find the statistics on pick rates by agent for each season of Valorant. An image of what the platform looks like has been included below.
   
 author:
   - name: Nathan Nambiar 
