@@ -1,12 +1,8 @@
 ---
 title: "The Progression Of Agent Pick Rates in Valorant"
 description: |
-  Valorant is a free-to-play online FPS game, involving two teams of 5 players each and various agents with unique abilities. Since the game's inception 2 years ago, new agents have been introduced that have influenced individual playstyles and subequent pick rates. 
-  
-    
-site: distill::distill_website
+  Welcome to the website for my final project. Enjoy your stay!
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
@@ -28,6 +24,17 @@ library(plotly)
 
 ```
 
+## *What Is Valorant?*
+
+   Valorant is a free-to-play online FPS game, involving two teams of 5 players each and various agents with unique abilities. Since the game's inception 2 years ago, new agents have been introduced that have influenced individual playstyles and subequent pick rates.
+   
+   With over 500 hours spent on this game, I decided that it would be interesting to understand how the community has responded to agent updates in Valorant and how the "play styles" have changed.
+
+
+## **Pick Rates**
+  
+  Although Valorant originally started out with 11 agents to select from, the current episode features 19 agents in total. As such, players have the choice to select which agent they want to play for each game which results in a statistic known as the 'pick rate'. The plot below details the pick rates for each agent through each episode and act of Valorant, providing a visualization for various trends.
+
 ```{r valorant-plot, warning=TRUE}
 #Data 
 data<-read_excel("agent_pickrates.xlsx",sheet="Sheet1") 
@@ -44,19 +51,56 @@ plot<- data |>
         plot.title = element_text(face="bold",size=20))+
   scale_y_continuous(labels = scales::percent)+
   scale_x_discrete(guide = guide_axis(n.dodge=2))+
-   labs(title="Pick Rates of Valorant Agents by Season",
-       subtitle="Episode: {frame_time}",
+   labs(title="Pick Rates of Valorant Agents By Season",
+       subtitle="Season Release Date: {closest_state} ",
        y="Pick Rate (%)",
-       caption="Source: blitz.gg")
+       caption="Source: blitz.gg") 
 
 
 #Transition for Bar Plot
-final_plot<- plot + transition_time(Date)
+final_plot<- plot + transition_states(Date, state_length=1)
  
 animate(final_plot, 
         duration = 30,
         fps  =  10)
 ```
+
+## **Pick Rates by Agent Class**
+
+The 19 agents in Valorant are divided into 4 classes: duelist, initiator, controller, and sentinel. Duelists are responsible for making space/pushing into an enemy site, initiators gather intel when making the push, sentinels help to defend the sites from attackers, and controllers offer support by blocking enemy sight lines. 
+
+These are the list of agents by class:
+
+* **Duelist**
+  + Jett
+  + Reyna
+  + Phoenix
+  + Raze
+  + Neon
+  + Yoru
+* **Controller**
+  + Brimstone
+  + Astra
+  + Viper
+  + Omen
+* **Initiator**
+  + Fade
+  + Sova
+  + Skye
+  + KAY/O
+  + Breach
+* **Sentinel**
+  + Chamber
+  + Killjoy
+  + Sage
+  + Cypher
+  
+  
+## Final Observations
+
+Using the visualization created, I can determine the least and most favored agents by class which I can then use to help me improve my competitve gameplay. After all, the best agents have a higher pick rate for a reason.
+
+For **duelists**, the most favored agent is Jett as seen from her rising pick rates from 2021-2022. The least favored duelist has historically been Yoru, with his pick rates dropping lower than Phoenix by the end of 2021. For **controllers**, Omen remains the most favored despite facing a small dip in pick rates after the introduction of viper. Inversely, Astra faced a small rise in popularity after being introduced but now has the lowest pick rate. For **initiators**, Sova has maintained his high-standing and is consistently picked in games. On the other hand, Breach is the least favored as his pick rate has steadily declined since he was introduced at the start of Valorant. Finally, the most favored **sentinel** is Chamber as seen through his dramatic rise in pick rates from late 2021 to present day. Despite his abilities, Cypher has maintained his position as the least favored sentinel. 
 
 
 

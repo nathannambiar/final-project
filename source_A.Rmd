@@ -1,16 +1,25 @@
 ---
-title: "Untitled"
+title: "Source A: Blitz.GG"
 description: |
-  Detailed notes for Source A
+  The first source for this project is [**Blitz.GG**](https://blitz.gg/valorant/stats/agents?map=all&act=e3act2&queue=competitive&tier=17), a third-party website that offers statistics and match history for Valoramt players.This source was used to find the statistics on pick rates by agent for each season of Valorant. An image of what the platform looks like has been included below.
+  
 author:
   - name: Nathan Nambiar 
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
 ```
+
+```{r}
+include_graphics("images/blitz.jpg")
+```
+
+
+---
+
 
 
 
